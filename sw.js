@@ -1,6 +1,6 @@
 'use strict';
 // Increment this version whenever the app shell changes.
-const CACHE='ark-shell-v3-20261115-2';
+const CACHE='ark-shell-v4-monochrome-1';
 const ROOT=new URL('./',self.location.href).href;
 const SHELL=['./','./index.html','./styles.css','./app.js','./manifest.webmanifest','./icons/ark.svg','./icons/icon-192.png','./icons/icon-512.png','./icons/maskable-512.png','./icons/apple-touch-icon.png'].map(p=>new URL(p,ROOT).href);
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL))));

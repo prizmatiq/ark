@@ -10,9 +10,9 @@ def inside(x,y,poly):
         if (ay>y)!=(by>y) and x<(bx-ax)*(y-ay)/(by-ay)+ax: hit=not hit
     return hit
 def color(x,y):
-    if inside(x,y,outer) and not inside(x,y,hole): return (164,225,190)
-    if 224<=x<288 and 366<=y<382: return (228,191,99)
-    return (12,16,20)
+    if inside(x,y,outer) and not inside(x,y,hole): return (238,238,238)
+    if 224<=x<288 and 366<=y<382: return (238,238,238)
+    return (0,0,0)
 def chunk(kind,data):
     return struct.pack('>I',len(data))+kind+data+struct.pack('>I',zlib.crc32(kind+data)&0xffffffff)
 def png(size,path):
